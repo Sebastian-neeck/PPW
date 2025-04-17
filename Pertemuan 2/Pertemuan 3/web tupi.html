@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Order Kopi Terogonk</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>TUPI</h1>
+    <p>Tukang Ngopi</p>
+  </header>
+
+  <section class="menu">
+    
+  </section>
+
+  <section class="gallery">
+    <h2>Galeri Kopi</h2>
+    <div class="gallery-grid">
+      <img src="kopi terogong 1.png" alt="Kopi 1">
+      <img src="kopi terogong 2.png" alt="Kopi 2">
+      <img src="kopi terogong 3.png" alt="Kopi 3">    
+    </div>
+  </section>
+  <section class="menu">
+    <h2>Menu Kopi</h2>
+  <div class="menu-list">
+    <div class="menu-item">
+      <h3>Liong</h3>
+      <p>Rp 5.000</p>
+      <label>Jumlah: <input type="number" value="0" min="0" class="qty" data-price="5000"></label>
+    </div>
+    <div class="menu-item">
+      <h3>Caramel Latte</h3>
+      <p>Rp 12.000</p>
+      <label>Jumlah: <input type="number" value="0" min="0" class="qty" data-price="12000"></label>
+    </div>
+    <div class="menu-item">
+      <h3>Cappucino</h3>
+      <p>Rp 10.000</p>
+      <label>Jumlah: <input type="number" value="0" min="0" class="qty" data-price="10000"></label>
+    </div>
+  </div>
+
+  <button id="orderBtn">JAJAN LAH</button>
+  
+  <!-- Tambahkan ini -->
+  <div id="orderSummary">
+    <p><strong>Total Minuman:</strong> <span id="totalItems">0</span></p>
+    <p><strong>Total Harga:</strong> Rp <span id="totalPrice">0</span></p>
+  </div>
+
+  <button id="checkoutBtn">ORDER</button>
+  <button id="resetBtn">RESET</button>
+
+
+<div id="checkoutResult" style="display:none; margin-top: 20px; padding: 1em; background-color: #f0fff0; border: 1px solid #ccc; border-radius: 10px;">
+  <h3>Total Pesanan Lo:</h3>
+  <ul id="checkoutList"></ul>
+  <p><strong>Total:</strong> <span id="checkoutTotal"></span></p>
+  <a id="waLink" target="_blank">Ke WhatsApp Aja</a>
+</div>
+
+  
+
+  <footer>
+    <p>📍 Jl. Bahari Raya No.17, Jakarta Selatan | ☎️ 0896-7673-7200</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

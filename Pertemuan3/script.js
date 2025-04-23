@@ -79,6 +79,12 @@ checkoutBtn.addEventListener("click", () => {
     }
   });
 
+  if (totalItems === 0) {
+    alert("LO PILIH DULU LAH!");
+    return;
+  }
+  
+
   checkoutTotal.textContent = `Rp ${totalPrice.toLocaleString("id-ID")}`;
   orderText += `\nTotal: Rp ${totalPrice.toLocaleString("id-ID")}`;
   const whatsappURL = `https://wa.me/6289676737200?text=${encodeURIComponent(orderText)}`;

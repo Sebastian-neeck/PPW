@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form Pembelian Kopi</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Form Pembelian Kopi</h1>
+    <p>Lengkapi data Anda untuk memproses pesanan</p>
+  </header>
+
+  <main>
+    <form id="purchaseForm">
+      <fieldset>
+        <legend>Data Pembeli</legend>
+        <label for="nama">Nama Lengkap:</label>
+        <input type="text" id="nama" name="nama" required><br><br>
+
+        <label for="alamat">Alamat:</label>
+        <textarea id="alamat" name="alamat" rows="3" required></textarea><br><br>
+
+        <label for="telepon">No. Telepon / WA:</label>
+        <input type="tel" id="telepon" name="telepon" required><br><br>
+      </fieldset>
+
+      <fieldset>
+        <legend>Ringkasan Pesanan</legend>
+        <div id="orderSummary">Belum ada pesanan.</div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Metode Pembayaran</legend>
+        <label><input type="radio" name="pembayaran" value="Transfer Bank" required> Transfer Bank</label><br>
+        <label><input type="radio" name="pembayaran" value="COD"> COD (Bayar di Tempat)</label><br>
+        <label><input type="radio" name="pembayaran" value="E-Wallet"> E-Wallet (OVO, GoPay, DANA)</label><br>
+        <label><input type="radio" name="pembayaran" value="QRIS" id="qrisRadio"> QRIS</label><br>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+
+<!-- Kolom isian untuk QRIS yang muncul jika 'QRIS' dipilih -->
+<div id="qrisCode" style="display:none; margin-top: 20px;">
+  <h3>Kode QR untuk Pembayaran</h3>
+  <div id="qrcode"></div>
+  <p>Scan kode QR di atas untuk melakukan pembayaran.</p>
+</div>
+
+      </fieldset>
+      <button type="submit">Kirim Pesanan</button>
+      <button type="reset">Reset</button>
+      <button type="button" onclick="window.location.href='../pertemuan4/tugas4.html'">Kembali</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>📍 Jl. Bahari Raya No.17, Jakarta Selatan | ☎ 0896-7673-7200</p>
+  </footer>
+
+  <!-- Script di akhir body -->
+  <script src="script.js"></script>
+</body>
+</html>
